@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario Retención en la Fuente 2024</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <img src="retencion.png"> 
+  <h1>Liquidador de Retención en la Fuente 2024</h1>
+  <form id="retencionForm">
+    <div>
+      <label for="agenteRetenedor">Nombre del Agente Retenedor (Comprador):</label>
+      <input type="text" id="agenteRetenedor" required>
+    </div>
+    <div>
+      <label for="fecha">Fecha Registro:</label>
+      <input type="date" id="fecha" required>
+    </div>
+    <div>
+      <label for="contribuyente">Nombre / Apellidos del Contribuyente (Vendedor):</label>
+      <input type="text" id="contribuyente" required>
+    </div>
+    <div>
+      <label for="nitCedula">Cédula o Nit (Vendedor) :</label>
+      <input type="text" id="nitCedula" required>
+    </div>
+    <div>
+      <label for="direccion">Dirección (Vendedor):</label>
+      <input type="text" id="direccion" required>
+    </div>
+    <div>
+      <label for="Detalle">Detalle de la Compra:</label>
+      <input type="text" id="Detalle" required>
+    </div>
+    <div>
+      <label for="valorCompra">($) Valor Compra o Servicio:</label>
+      <input type="text" id="valorCompra" required>
+    </div>
+    <div>
+      <label for="concepto">Concepto Dian:</label>
+      <select id="concepto" required>
+        <option value="" disabled selected>Seleccione un concepto</option>
+        <option value="concepto1">5007 Compras</option>
+        <option value="concepto2">5004 Servicios</option>
+        <option value="concepto2">5002 Honorarios</option>
+        <option value="concepto2">5005 Arrendamientos</option>
+        <!-- Agrega más opciones según necesites -->
+      </select>
+    </div>
+    <div>
+      <label for="baseRetencion">($) Base de Retención (Sin Iva):</label>
+      <input type="text" id="baseRetencion" required>
+    </div>
+    <div>
+      <label for="tarifaRetencion">Tarifa de Retención:</label>
+      <select id="tarifaRetencion" required>
+        <option value="" disabled selected>Seleccione una tarifa</option>
+        <option value="2.5">Compras generales (declarantes renta) 2.5% Base Minima  $1.271.000</option>
+        <option value="3.5">Compras generales (No declarantes renta) 3.5% Base Minima  $1.271.000</option>
+        <option value="4">Servicios generales (declarantes renta) 4% Base Minima $188.000</option>
+        <option value="6">Servicios generales (No declarantes renta) 6% Base Minima $188.000</option>
+        <option value="10">Honorarios y comisiones (no declarantes 
+        renta) 10% Base Minima Desde $ 1</option>
+        <option value="2">Contratos de construcción y urbanización 2% Base Minima $1.271.000</option>
+        <option value="0.10">Compras de combustibles derivados del 
+        petróleo 0.10% Base Minima Desde $1</option>
+        <option value="3.5">Arrendamiento de bienes inmuebles 
+        (declarantes y no declarantes) 3.5% Base Minima Desde $1.271.000</option>
+        <option value="4">Arrendamiento de bienes muebles (declarantes y no declarantes) 4% Base Minima Desde $1 </option>
+            
+        <!-- Agrega más opciones según necesites -->
+      </select>
+    </div>
+    <div>
+      <label for="valorRetenido">($) Valor Retenido:</label>
+      <input type="text" id="valorRetenido" readonly>
+    </div>
+    <div>
+      <label for="valorPagar">($) Valor a pagar:</label>
+      <input type="text" id="valorPagar" readonly>
+    </div>
+    <div>
+      <button type="button" onclick="calcularRetencion()">Calcular Retención</button>
+      <button type="button" onclick="limpiarFormulario()">Limpiar Formulario</button>
+      <button type="submit">Enviar</button>
+    </div>
+  </form>
+  <script src="script.js"></script>
+</body>
+</html>
